@@ -1,0 +1,8 @@
+- hosts: webserver
+  sudo: yes
+  vars:
+    http_port: 80
+    max_clients: 200
+  tasks:
+  - name: uninstall
+    yum: name=httpd state=absent
